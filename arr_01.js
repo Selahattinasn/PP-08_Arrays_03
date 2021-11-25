@@ -1,4 +1,23 @@
-/*********   CODE CHALLENGE HTML **********/
+/*********   Theorie **********/
+// push() / pop()
+
+// push --> Daten rein ... (+)
+let arr = [];
+output(arr);
+arr.push("Ich");
+output(arr);
+arr.push("bin");
+output(arr);
+arr.push("Maxine");
+output(arr);
+
+// // pop() --> Daten raus ... (-)
+output(arr.pop());
+output(arr);
+output(arr.pop());
+output(arr);
+output(arr.pop());
+output(arr);
 
 /*
 Aufgabe:
@@ -12,7 +31,7 @@ const controls = ["<", "</", ">"];
 const tags = ["html","head","head","body","h1","h1","p","p","body","html"];
 let stack = [];
 
-output(getHTML());
+// output(getHTML());
 function getHTML() {
 
     let htmlStr = "";
@@ -20,7 +39,7 @@ function getHTML() {
     // </tag> --> close
 
     for (let i = 0; i < tags.length; i++) {
-        if (true) { // ????
+        if (isOpenTag(tags[i])) { 
             htmlStr += getTags(tags[i],"open"); 
         } else {
             htmlStr += getTags(tags[i],"close");
@@ -28,6 +47,11 @@ function getHTML() {
     }
 
     return htmlStr;
+}
+
+// Modul: open || close ?
+function isOpenTag(tag) {
+    return false;
 }
 
 // Modul: Zusammenbau: <tagStr> --> Tests:
