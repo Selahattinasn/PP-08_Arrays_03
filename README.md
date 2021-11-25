@@ -1,3 +1,3 @@
-# 09_Array_Challenge
+# 08_Array_03
 
 Erzeugen einer HTML-Struktur mit JavaScript
