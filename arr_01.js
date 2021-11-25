@@ -2,22 +2,22 @@
 // push() / pop()
 
 // push --> Daten rein ... (+)
-let arr = [];
-output(arr);
-arr.push("Ich");
-output(arr);
-arr.push("bin");
-output(arr);
-arr.push("Maxine");
-output(arr);
+// let arr = [];
+// output(arr);
+// arr.push("Ich");
+// output(arr);
+// arr.push("bin");
+// output(arr);
+// arr.push("Maxine");
+// output(arr);
 
 // // pop() --> Daten raus ... (-)
-output(arr.pop());
-output(arr);
-output(arr.pop());
-output(arr);
-output(arr.pop());
-output(arr);
+// output(arr.pop());
+// output(arr);
+// output(arr.pop());
+// output(arr);
+// output(arr.pop());
+// output(arr);
 
 /*
 Aufgabe:
@@ -31,7 +31,7 @@ const controls = ["<", "</", ">"];
 const tags = ["html","head","head","body","h1","h1","p","p","body","html"];
 let stack = [];
 
-// output(getHTML());
+output(getHTML());
 function getHTML() {
 
     let htmlStr = "";
@@ -51,7 +51,19 @@ function getHTML() {
 
 // Modul: open || close ?
 function isOpenTag(tag) {
-    return false;
+   
+    //  const cond = (stack.indexOf(tag) == - 1); // tag ist neu!
+     const cond = (tag != stack[stack.length -1]); // tag liegt oben!
+
+    if (cond) {
+        stack.push(tag);
+        output(stack);
+        return true;
+    } else {
+        stack.pop();
+        output(stack);
+        return false;
+    }
 }
 
 // Modul: Zusammenbau: <tagStr> --> Tests:
