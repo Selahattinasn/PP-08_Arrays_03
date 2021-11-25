@@ -9,7 +9,7 @@ Verwenden Sie dafür die untenstehenden Arrays
 */
 
 const controls = ["<", "</", ">"];
-const tags = ["html","head","head","body","h1","h1","p","p",","body","html"];
+const tags = ["html","head","head","body","h1","h1","p","p","body","html"];
 let stack = [];
 
 
